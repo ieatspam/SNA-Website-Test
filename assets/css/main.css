@@ -3187,7 +3187,7 @@ input, select, textarea {
 						margin-bottom: 2em;
 					}
 
-		/* Flip Card Styles */
+/* Flip Card Styles */
 .cards {
   display: flex;
   flex-wrap: wrap;
@@ -3242,6 +3242,3 @@ input, select, textarea {
   color: #000;
   transform: rotateY(180deg);
 }
-
-
-	}
