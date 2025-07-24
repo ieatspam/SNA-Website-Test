@@ -146,17 +146,19 @@
 		</section>
 	</div>
 
-	<!-- Marvel Character Social Network interactive -->
+	<!-- Social Network interactive -->
 	 <div class = "wrapper style2">
 		<div class="container" style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 50vh;">
 			<header style="margin-top: 30px;">
-				<h2>Marvel Character Social Network</h2>
-				<p>Explore the connections between your favorite Marvel characters!</p>
+				<h2 id="dataset-title">Marvel Character Social Network</h2>
+				<p id="dataset-description">Explore the connections between your favorite Marvel characters!</p>
 			</header>
 
 			<div class="controls" style="margin-bottom: 20px;">
+				<button onclick="previousDataset()">← Previous Dataset</button>
 				<button onclick="restartSimulation()">Restart Simulation</button>
 				<button onclick="resetPositions()">Reset Positions</button>
+				<button onclick="nextDataset()">Next Dataset →</button>
 			</div>
 			<div id="network-container" style="display: flex; justify-content: center; align-items: center;"></div>
 		</div>
@@ -168,6 +170,35 @@
 				let svg;
 				let width = 928;
 				let height = 600;
+				let currentDatasetIndex = 0;
+				
+				// Dataset configuration
+				const datasets = [
+					{
+						name: "Marvel Character Social Network",
+						description: "Explore the connections between your favorite Marvel characters!",
+						file: "JSON_graph_marvel_20250715_115432.json",
+						color: "marvel"
+					},
+					{
+						name: "Star Wars Character Social Network",
+						description: "Discover how characters connect across the Star Wars galaxy!",
+						file: "star_wars_SNA.json", 
+						color: "starwars"
+					},
+					{
+						name: "Harry Potter Character Social Network",
+						description: "See the magical connections in the wizarding world!",
+						file: "harry_potter_SNA.json", 
+						color: "harrypotter"
+					},
+					{
+						name: "Breaking Bad Social Network",
+						description: "Analyze the relationships in Breaking Bad!",
+						file: "breaking_bad_SNA.json", 
+						color: "breakingbad"
+					}
+				];
 				
 				// Create tooltip
 				const tooltip = d3.select("body").append("div")
@@ -176,11 +207,15 @@
 				// Load and render the network
 				async function loadAndRenderNetwork() {
 					try {
-						// Load the JSON data
-						const data = await d3.json("JSON_graph_marvel_20250715_115432.json");
+						// Update header text
+						updateHeaderText();
 						
+						// Load the current dataset
+						const currentDataset = datasets[currentDatasetIndex];
+						const data = await d3.json(currentDataset.file);
+
 						// Create the network visualization
-						createNetworkVisualization(data);
+						createNetworkVisualization(data, currentDataset);
 						
 					} catch (error) {
 						console.error("Error loading data:", error);
@@ -188,16 +223,50 @@
 							.append("div")
 							.style("text-align", "center")
 							.style("color", "red")
-							.text("Error loading network data. Please check if the JSON file exists.");
+							.text(`Error loading ${datasets[currentDatasetIndex].name} data. Please check if the file exists.`);
 					}
 				}
+				
+				// Update header text based on current dataset
+				function updateHeaderText() {
+					const currentDataset = datasets[currentDatasetIndex];
+					document.getElementById("dataset-title").textContent = currentDataset.name;
+					document.getElementById("dataset-description").textContent = currentDataset.description;
+				}
+				
+				// Navigation functions
+				function nextDataset() {
+					currentDatasetIndex = (currentDatasetIndex + 1) % datasets.length;
+					loadAndRenderNetwork();
+				}
+				
+				function previousDataset() {
+					currentDatasetIndex = (currentDatasetIndex - 1 + datasets.length) % datasets.length;
+					loadAndRenderNetwork();
+				}
 
-				function createNetworkVisualization(data) {
+				function createNetworkVisualization(data, dataset) {
 					// Clear any existing content
 					d3.select("#network-container").selectAll("*").remove();
 					
-					// Specify the color scale
-					const color = d3.scaleOrdinal(d3.schemeCategory10);
+					// Specify the color scale based on dataset theme
+					let color;
+					switch(dataset.color) {
+						case "marvel":
+							color = d3.scaleOrdinal(["#e31a1c", "#1f78b4", "#33a02c", "#ff7f00", "#6a3d9a", "#b15928", "#a6cee3", "#fdbf6f", "#cab2d6", "#ffff99"]);
+							break;
+						case "starwars":
+							color = d3.scaleOrdinal(["#FFE81F", "#000000", "#C0C0C0", "#FF6B35", "#4169E1", "#8B4513", "#228B22", "#DC143C", "#9370DB", "#FF1493"]);
+							break;
+						case "harrypotter":
+							color = d3.scaleOrdinal(["#740001", "#AE0001", "#EEBA30", "#D3A625", "#0E1A40", "#222F5B", "#FFDB00", "#F0C75E", "#372E29", "#726255"]);
+							break;
+						case "breakingbad":
+							color = d3.scaleOrdinal(["#1B4D3E", "#2F7D4A", "#FFDE00", "#FFA500", "#8B4513", "#2F4F4F", "#228B22", "#006400", "#B8860B", "#DAA520"]);
+							break;
+						default:
+							color = d3.scaleOrdinal(d3.schemeCategory10);
+					}
 
 					// The force simulation mutates links and nodes, so create a copy
 					const links = data.links.map(d => ({...d}));

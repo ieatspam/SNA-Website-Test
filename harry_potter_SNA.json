@@ -1,0 +1,186 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "id": "Harry Potter"
+    },
+    {
+      "id": "Hermione Granger"
+    },
+    {
+      "id": "Ron Weasley"
+    },
+    {
+      "id": "Albus Dumbledore"
+    },
+    {
+      "id": "Severus Snape"
+    },
+    {
+      "id": "Lord Voldemort"
+    },
+    {
+      "id": "Rubeus Hagrid"
+    },
+    {
+      "id": "Draco Malfoy"
+    },
+    {
+      "id": "Ginny Weasley"
+    },
+    {
+      "id": "Fred Weasley"
+    },
+    {
+      "id": "George Weasley"
+    },
+    {
+      "id": "Minerva McGonagall"
+    },
+    {
+      "id": "Dobby"
+    },
+    {
+      "id": "Sirius Black"
+    },
+    {
+      "id": "Remus Lupin"
+    },
+    {
+      "id": "Neville Longbottom"
+    },
+    {
+      "id": "Luna Lovegood"
+    },
+    {
+      "id": "Bellatrix Lestrange"
+    },
+    {
+      "id": "Dolores Umbridge"
+    }
+  ],
+  "links": [
+    {
+      "source": "Harry Potter",
+      "target": "Hermione Granger"
+    },
+    {
+      "source": "Harry Potter",
+      "target": "Ron Weasley"
+    },
+    {
+      "source": "Hermione Granger",
+      "target": "Ron Weasley"
+    },
+    {
+      "source": "Harry Potter",
+      "target": "Albus Dumbledore"
+    },
+    {
+      "source": "Harry Potter",
+      "target": "Severus Snape"
+    },
+    {
+      "source": "Harry Potter",
+      "target": "Lord Voldemort"
+    },
+    {
+      "source": "Harry Potter",
+      "target": "Rubeus Hagrid"
+    },
+    {
+      "source": "Harry Potter",
+      "target": "Draco Malfoy"
+    },
+    {
+      "source": "Harry Potter",
+      "target": "Ginny Weasley"
+    },
+    {
+      "source": "Harry Potter",
+      "target": "Sirius Black"
+    },
+    {
+      "source": "Harry Potter",
+      "target": "Remus Lupin"
+    },
+    {
+      "source": "Harry Potter",
+      "target": "Neville Longbottom"
+    },
+    {
+      "source": "Harry Potter",
+      "target": "Luna Lovegood"
+    },
+    {
+      "source": "Harry Potter",
+      "target": "Dolores Umbridge"
+    },
+    {
+      "source": "Hermione Granger",
+      "target": "Minerva McGonagall"
+    },
+    {
+      "source": "Ron Weasley",
+      "target": "Fred Weasley"
+    },
+    {
+      "source": "Ron Weasley",
+      "target": "George Weasley"
+    },
+    {
+      "source": "Albus Dumbledore",
+      "target": "Severus Snape"
+    },
+    {
+      "source": "Albus Dumbledore",
+      "target": "Minerva McGonagall"
+    },
+    {
+      "source": "Albus Dumbledore",
+      "target": "Lord Voldemort"
+    },
+    {
+      "source": "Severus Snape",
+      "target": "Lord Voldemort"
+    },
+    {
+      "source": "Severus Snape",
+      "target": "Draco Malfoy"
+    },
+    {
+      "source": "Lord Voldemort",
+      "target": "Bellatrix Lestrange"
+    },
+    {
+      "source": "Rubeus Hagrid",
+      "target": "Albus Dumbledore"
+    },
+    {
+      "source": "Dobby",
+      "target": "Harry Potter"
+    },
+    {
+      "source": "Sirius Black",
+      "target": "Remus Lupin"
+    },
+    {
+      "source": "Fred Weasley",
+      "target": "George Weasley"
+    },
+    {
+      "source": "Ginny Weasley",
+      "target": "Neville Longbottom"
+    },
+    {
+      "source": "Ginny Weasley",
+      "target": "Luna Lovegood"
+    },
+    {
+      "source": "Neville Longbottom",
+      "target": "Luna Lovegood"
+    }
+  ]
+}
