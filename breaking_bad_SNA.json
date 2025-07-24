@@ -1,0 +1,311 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "id": "Walter White"
+    },
+    {
+      "id": "Jesse Pinkman"
+    },
+    {
+      "id": "Skyler White"
+    },
+    {
+      "id": "Hank Schrader"
+    },
+    {
+      "id": "Marie Schrader"
+    },
+    {
+      "id": "Saul Goodman"
+    },
+    {
+      "id": "Gustavo Fring"
+    },
+    {
+      "id": "Mike Ehrmantraut"
+    },
+    {
+      "id": "Walter White Jr."
+    },
+    {
+      "id": "Holly White"
+    },
+    {
+      "id": "Tuco Salamanca"
+    },
+    {
+      "id": "Hector Salamanca"
+    },
+    {
+      "id": "Jane Margolis"
+    },
+    {
+      "id": "Todd Alquist"
+    },
+    {
+      "id": "Lydia Rodarte-Quayle"
+    },
+    {
+      "id": "Badger"
+    },
+    {
+      "id": "Skinny Pete"
+    },
+    {
+      "id": "Combo"
+    },
+    {
+      "id": "Krazy-8 Molina"
+    },
+    {
+      "id": "Emilio Koyama"
+    },
+    {
+      "id": "Gale Boetticher"
+    },
+    {
+      "id": "Tio Salamanca"
+    },
+    {
+      "id": "Leonel Salamanca"
+    },
+    {
+      "id": "Marco Salamanca"
+    },
+    {
+      "id": "Bogdan Wolynetz"
+    },
+    {
+      "id": "Andrea Cantillo"
+    },
+    {
+      "id": "Brock Cantillo"
+    },
+    {
+      "id": "Huell Babineaux"
+    },
+    {
+      "id": "Patrick Kuby"
+    },
+    {
+      "id": "Jack Welker"
+    }
+  ],
+  "links": [
+    {
+      "source": "Walter White",
+      "target": "Jesse Pinkman"
+    },
+    {
+      "source": "Walter White",
+      "target": "Skyler White"
+    },
+    {
+      "source": "Walter White",
+      "target": "Hank Schrader"
+    },
+    {
+      "source": "Walter White",
+      "target": "Saul Goodman"
+    },
+    {
+      "source": "Walter White",
+      "target": "Gustavo Fring"
+    },
+    {
+      "source": "Walter White",
+      "target": "Mike Ehrmantraut"
+    },
+    {
+      "source": "Walter White",
+      "target": "Walter White Jr."
+    },
+    {
+      "source": "Walter White",
+      "target": "Tuco Salamanca"
+    },
+    {
+      "source": "Walter White",
+      "target": "Lydia Rodarte-Quayle"
+    },
+    {
+      "source": "Walter White",
+      "target": "Gale Boetticher"
+    },
+    {
+      "source": "Walter White",
+      "target": "Todd Alquist"
+    },
+    {
+      "source": "Walter White",
+      "target": "Jack Welker"
+    },
+    {
+      "source": "Jesse Pinkman",
+      "target": "Saul Goodman"
+    },
+    {
+      "source": "Jesse Pinkman",
+      "target": "Gustavo Fring"
+    },
+    {
+      "source": "Jesse Pinkman",
+      "target": "Mike Ehrmantraut"
+    },
+    {
+      "source": "Jesse Pinkman",
+      "target": "Jane Margolis"
+    },
+    {
+      "source": "Jesse Pinkman",
+      "target": "Todd Alquist"
+    },
+    {
+      "source": "Jesse Pinkman",
+      "target": "Badger"
+    },
+    {
+      "source": "Jesse Pinkman",
+      "target": "Skinny Pete"
+    },
+    {
+      "source": "Jesse Pinkman",
+      "target": "Combo"
+    },
+    {
+      "source": "Jesse Pinkman",
+      "target": "Krazy-8 Molina"
+    },
+    {
+      "source": "Jesse Pinkman",
+      "target": "Emilio Koyama"
+    },
+    {
+      "source": "Jesse Pinkman",
+      "target": "Andrea Cantillo"
+    },
+    {
+      "source": "Jesse Pinkman",
+      "target": "Brock Cantillo"
+    },
+    {
+      "source": "Skyler White",
+      "target": "Hank Schrader"
+    },
+    {
+      "source": "Skyler White",
+      "target": "Marie Schrader"
+    },
+    {
+      "source": "Skyler White",
+      "target": "Saul Goodman"
+    },
+    {
+      "source": "Skyler White",
+      "target": "Walter White Jr."
+    },
+    {
+      "source": "Skyler White",
+      "target": "Holly White"
+    },
+    {
+      "source": "Skyler White",
+      "target": "Bogdan Wolynetz"
+    },
+    {
+      "source": "Hank Schrader",
+      "target": "Marie Schrader"
+    },
+    {
+      "source": "Hank Schrader",
+      "target": "Mike Ehrmantraut"
+    },
+    {
+      "source": "Hank Schrader",
+      "target": "Tuco Salamanca"
+    },
+    {
+      "source": "Hank Schrader",
+      "target": "Leonel Salamanca"
+    },
+    {
+      "source": "Hank Schrader",
+      "target": "Marco Salamanca"
+    },
+    {
+      "source": "Saul Goodman",
+      "target": "Mike Ehrmantraut"
+    },
+    {
+      "source": "Saul Goodman",
+      "target": "Huell Babineaux"
+    },
+    {
+      "source": "Saul Goodman",
+      "target": "Patrick Kuby"
+    },
+    {
+      "source": "Gustavo Fring",
+      "target": "Mike Ehrmantraut"
+    },
+    {
+      "source": "Gustavo Fring",
+      "target": "Hector Salamanca"
+    },
+    {
+      "source": "Gustavo Fring",
+      "target": "Lydia Rodarte-Quayle"
+    },
+    {
+      "source": "Gustavo Fring",
+      "target": "Gale Boetticher"
+    },
+    {
+      "source": "Mike Ehrmantraut",
+      "target": "Lydia Rodarte-Quayle"
+    },
+    {
+      "source": "Mike Ehrmantraut",
+      "target": "Jesse Pinkman"
+    },
+    {
+      "source": "Hector Salamanca",
+      "target": "Tuco Salamanca"
+    },
+    {
+      "source": "Hector Salamanca",
+      "target": "Tio Salamanca"
+    },
+    {
+      "source": "Hector Salamanca",
+      "target": "Leonel Salamanca"
+    },
+    {
+      "source": "Hector Salamanca",
+      "target": "Marco Salamanca"
+    },
+    {
+      "source": "Todd Alquist",
+      "target": "Jack Welker"
+    },
+    {
+      "source": "Todd Alquist",
+      "target": "Lydia Rodarte-Quayle"
+    },
+    {
+      "source": "Badger",
+      "target": "Skinny Pete"
+    },
+    {
+      "source": "Badger",
+      "target": "Combo"
+    },
+    {
+      "source": "Krazy-8 Molina",
+      "target": "Emilio Koyama"
+    }
+  ]
+}
