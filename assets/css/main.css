@@ -3207,7 +3207,7 @@ body {
 .container {
   width: 350px;
   height: 500px;
-  perspective: 1000px;
+  perspective: 800px;
 }
 
 .container:hover > .card {
@@ -3216,8 +3216,8 @@ body {
 }
 
 .card {
-  width: 100%;
   height: 100%;
+  width: 100%;
   position: relative;
   transition: transform 1500ms;
   transform-style: preserve-3d;
@@ -3225,8 +3225,8 @@ body {
 
 .front,
 .back {
-  width: 100%;
   height: 100%;
+  width: 100%;
   border-radius: 2rem;
   box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
   position: absolute;
@@ -3234,9 +3234,7 @@ body {
 }
 
 .front {
-  background-image: url('https://source.unsplash.com/random/350x500');
-  background-size: cover;
-  background-position: center;
+  background-image: url(https://source.unsplash.com/random/350x500);
 }
 
 .back {
