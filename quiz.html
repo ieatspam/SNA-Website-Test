@@ -21,8 +21,34 @@
       font-size: 1.2em;
     }
     .question label {
+      display: inline-block;
+      margin: 0.5em 0.5em 0.5em 0;
+      padding: 0.8em 1.2em;
+      background: #f8f9fa;
+      border: 2px solid #dee2e6;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 0.9em;
+      min-width: 120px;
+      text-align: center;
+    }
+    .question label:hover {
+      background: #e9ecef;
+      border-color: #adb5bd;
+    }
+    .question input[type="radio"] {
+      display: none;
+    }
+    .question input[type="radio"]:checked + span {
+      background: #007bff;
+      color: white;
+      border-color: #007bff;
+    }
+    .question label span {
       display: block;
-      margin: 0.3em 0;
+      width: 100%;
+      height: 100%;
     }
     #result {
       margin-top: 2em;
@@ -41,23 +67,23 @@
     <form id="sna-quiz">
       <div class="question">
         <h3>1. What is a node?</h3>
-        <label><input type="radio" name="q1" value="0"> A connection</label>
-        <label><input type="radio" name="q1" value="1"> A person or thing in a network</label>
-        <label><input type="radio" name="q1" value="0"> A cluster</label>
+        <label><input type="radio" name="q1" value="0"><span>A connection</span></label>
+        <label><input type="radio" name="q1" value="1"><span>A person or thing in a network</span></label>
+        <label><input type="radio" name="q1" value="0"><span>A cluster</span></label>
       </div>
 
       <div class="question">
         <h3>2. What is an edge in SNA?</h3>
-        <label><input type="radio" name="q2" value="1"> A connection between nodes</label>
-        <label><input type="radio" name="q2" value="0"> A group of people</label>
-        <label><input type="radio" name="q2" value="0"> A diagram</label>
+        <label><input type="radio" name="q2" value="1"><span>A connection between nodes</span></label>
+        <label><input type="radio" name="q2" value="0"><span>A group of people</span></label>
+        <label><input type="radio" name="q2" value="0"><span>A diagram</span></label>
       </div>
 
       <div class="question">
         <h3>3. What does a bridge node do?</h3>
-        <label><input type="radio" name="q3" value="1"> Connects different groups</label>
-        <label><input type="radio" name="q3" value="0"> Breaks up a network</label>
-        <label><input type="radio" name="q3" value="0"> Starts a network</label>
+        <label><input type="radio" name="q3" value="1"><span>Connects different groups</span></label>
+        <label><input type="radio" name="q3" value="0"><span>Breaks up a network</span></label>
+        <label><input type="radio" name="q3" value="0"><span>Starts a network</span></label>
       </div>
 
       <button type="submit">Submit Quiz</button>
